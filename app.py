@@ -14,17 +14,9 @@ from prophet.plot import plot_plotly
 
 from sklearn.model_selection import TimeSeriesSplit
 
-from statsmodels.tsa.stattools import adfuller
-
 import pickle
 
-from utils import (normality_test, 
-                   create_warning, 
-                   create_quote, 
-                   create_curiosity, 
-                   create_insight, 
-                   create_analysis, 
-                   insert_image)
+from utils import *
 
 # layout
 st.set_page_config(layout='centered', 
