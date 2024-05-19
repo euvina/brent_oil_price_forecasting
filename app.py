@@ -1505,6 +1505,7 @@ elif page == page_2:
             if st.button('📊 Exibir Scores'):
                 # dataframe com scores
                 scores_baseline_df = pd.read_parquet(r'data/prophet_baseline_scores.parquet')
+                scores_baseline_df.iloc[:, -3:] = scores_baseline_df.iloc[:, -3:].round(4)
                 st.dataframe(scores_baseline_df)
             
             st.markdown('<br>', unsafe_allow_html=True)
@@ -1690,6 +1691,7 @@ elif page == page_2:
             if st.button('📊 Exibir Scores'):
                 # dataframe com scores
                 scores_final_df = pd.read_parquet(r'data/prophet_final_scores.parquet')
+                scores_final_df.iloc[:, -3:] = scores_final_df.iloc[:, -3:].round(4)
                 st.dataframe(scores_final_df)
 
             st.markdown('<br>', unsafe_allow_html=True)
