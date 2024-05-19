@@ -230,8 +230,6 @@ elif page == page_1:
     fig.update_yaxes(range=[0, df['brent'].max() * 1.1])
     st.plotly_chart(fig, use_container_width=True)
     
-    st.markdown('<br>', unsafe_allow_html=True)
-    
     create_quote('''
                     Desde 1973, a posição da OPEP sempre foi a de desacelerar a produção – 
                     através de uma política de cotas para cada país-membro – 
