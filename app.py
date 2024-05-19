@@ -1345,13 +1345,9 @@ elif page == page_2:
         # text
         st.markdown('''
                     Em que:
-                    - Growth g(t): representa a curva de crescimento linear ou logística, para modelar mudanças não periódicas em séries temporais. 
-                    Por padrão, o Prophet usa o modelo de crescimento linear para as previsões.
-                    - Seasonality s(t): a série de Fourier é usada para modelar efeitos sazonais ou 
-                    mudanças periódicas (por exemplo: o ciclo semanal, mensal e anual). 
-                    Para aprender e prever tais efeitos, o Prophet depende da série de Fourier para fornecer um modelo flexível.
-                    - Feriados e eventos h(t): o Prophet considera o efeito de feriados e permite adicionar os parâmetro
-                    supper_window e lower_window, que estendem os efeitos dos feriados em torno de suas datas.
+                    - Growth g(t): representa a curva de crescimento linear ou logística, para modelar mudanças não periódicas em séries temporais. Por padrão, o Prophet usa o modelo de crescimento linear para as previsões.
+                    - Seasonality s(t): a série de Fourier é usada para modelar efeitos sazonais ou mudanças periódicas (por exemplo: o ciclo semanal, mensal e anual). Para aprender e prever tais efeitos, o Prophet depende da série de Fourier para fornecer um modelo flexível.
+                    - Feriados e eventos h(t): o Prophet considera o efeito de feriados e permite adicionar os parâmetro supper_window e lower_window, que estendem os efeitos dos feriados em torno de suas datas.
                     - Termo de erro e(t): o termo de erro leva em conta quaisquer mudanças incomuns não acomodadas pelo modelo.
                     ''')
         
