@@ -554,7 +554,7 @@ elif page == page_1:
                 - **SP500**: Índice de ações da bolsa de valores dos EUA (unidade: pontos)
                 - **Exxon**: Ações da Exxon Mobil Corporation (unidade: U$D )
                 - **BP**: Ações da British Petroleum (unidade: U$D )
-                <br><br>
+                <br>
                 ''', unsafe_allow_html=True)
     
     # plot
