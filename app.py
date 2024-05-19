@@ -248,7 +248,7 @@ elif page == page_1:
                 <br>
                 - A mínima do período data de 10 de Dezembro de 1998, com preço equivalente a U$D 9.10.<br>
                 - A segunda menor mínima ocorreu na Pandemia de COVID-19, em 21 de Abril de 2020, com preço em U$D 9.12.<br>
-                - Em 2008, o preço do barril de petróleo Brent atingiu o valor recorde de U$D 143.95. Com grande recessão, 
+                - Em 2008, o preço do barril de petróleo Brent atingiu o valor recorde de U$D 143.95. Com a grande recessão, 
                 o preço caiu para U$D 33.73 no mesmo ano. A variação agressiva foi de -326.78%.<br>
                 - As guerras entre EUA e Iraque (2003) e entre Rússia e Ucrânia (2022) 
                 também impactaram diretamente no preço do petróleo - por questões de oferta e demanda, 
