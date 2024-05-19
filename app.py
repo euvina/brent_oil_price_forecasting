@@ -306,11 +306,13 @@ elif page == page_1:
     # variação percentual
     fig.add_trace(go.Scatter(x=df.index, y=df['brent_pct'], name='Variação (%)',
                             line=dict(color='#4089FF')), row=3, col=1)
-    
     # atualizar layout
     fig.update_layout(title='Preço do Petróleo Brent - Original, Diferença e Variação (%)',
                     title_font_size=20, showlegend=False, template='plotly_dark',
                     hovermode='x unified', height=600)
+    fig.update_yaxes(range=[0, df['brent'].max() * 1.1], row=1, col=1)
+    fig.update_yaxes(range=[-20, 20], row=2, col=1)
+    fig.update_yaxes(range=[-60, 60], row=3, col=1)
     fig.update_xaxes(title='')
     st.plotly_chart(fig, use_container_width=True)
     
