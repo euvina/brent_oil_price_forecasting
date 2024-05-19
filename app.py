@@ -1306,13 +1306,11 @@ elif page == page_2:
             # botão para exibir scores
             if st.button('📊 Exibir Scores'):
                 scores_best_df = pd.read_parquet(r'data/xgboost_best_scores.parquet')
-                # select only last row
                 scores_best_df = scores_best_df.iloc[[-1]]
                 scores_best_df = scores_best_df.T
-                #first row as header
                 scores_best_df.columns = scores_best_df.iloc[0]
-                # drop first row
                 scores_best_df = scores_best_df[1:]
+                scores_best_df = scores_best_df.rename(columns={'XGBoost Best5': 'XGBoost Best'})
                 # mostrar dataframe
                 st.dataframe(scores_best_df)
             
