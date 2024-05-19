@@ -475,7 +475,7 @@ elif page == page_1:
                     a variação média foi de 0.15%, com desvio padrão de 5.05%. Além disso, a máxima variação sobre a mudança no preço
                     atingida na pandemia foi de 50.98%.<br><br>
                     A plotagem da variável em 3 dimensões, onde o eixo do gráfico que contém a data é 
-                    desmembrado em 2 outros eixos (ano e mês), ajuda a enxergar e padrões, 
+                    desmembrado em 2 outros eixos (ano e mês), ajuda a enxergar padrões, 
                     como ciclos de sazonalidade e tendências:
                     <br>
                 </p>
