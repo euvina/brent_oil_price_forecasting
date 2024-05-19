@@ -98,4 +98,4 @@ watchdog
 wcwidth
 webencodings
 xgboost
-yfinance
+yfinance==0.2.38
