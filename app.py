@@ -1345,9 +1345,7 @@ elif page == page_2:
         # text
         st.markdown('''
                     Em que:
-                    
-                    - Growth g(t): representa a curva de crescimento linear ou logística, 
-                    para modelar mudanças não periódicas em séries temporais. 
+                    - Growth g(t): representa a curva de crescimento linear ou logística, para modelar mudanças não periódicas em séries temporais. 
                     Por padrão, o Prophet usa o modelo de crescimento linear para as previsões.
                     - Seasonality s(t): a série de Fourier é usada para modelar efeitos sazonais ou 
                     mudanças periódicas (por exemplo: o ciclo semanal, mensal e anual). 
