@@ -14,9 +14,17 @@ from prophet.plot import plot_plotly
 
 from sklearn.model_selection import TimeSeriesSplit
 
+from statsmodels.tsa.stattools import adfuller
+
 import pickle
 
-from utils import *
+from utils import (normality_test, 
+                   create_warning, 
+                   create_quote, 
+                   create_curiosity, 
+                   create_insight, 
+                   create_analysis, 
+                   insert_image)
 
 # layout
 st.set_page_config(layout='centered', 
@@ -306,6 +314,7 @@ elif page == page_1:
     # variação percentual
     fig.add_trace(go.Scatter(x=df.index, y=df['brent_pct'], name='Variação (%)',
                             line=dict(color='#4089FF')), row=3, col=1)
+    
     # atualizar layout
     fig.update_layout(title='Preço do Petróleo Brent - Original, Diferença e Variação (%)',
                     title_font_size=20, showlegend=False, template='plotly_dark',
@@ -1337,17 +1346,18 @@ elif page == page_2:
         
         # text
         st.markdown('''
-                    Em que:<br>
+                    Em que:
+                    
                     - Growth g(t): representa a curva de crescimento linear ou logística, 
-                    para modelar mudanças não periódicas em séries temporais. Por padrão, o Prophet 
-                    usa o modelo de crescimento linear para as previsões.<br>
-                    - Seasonality s(t): a série de Fourier é usada para modelar efeitos sazonais ou mudanças periódicas 
-                    (por exemplo: o ciclo semanal, mensal e anual). Para aprender e prever tais efeitos, o Prophet 
-                    depende da série de Fourier para fornecer um modelo flexível.
+                    para modelar mudanças não periódicas em séries temporais. 
+                    Por padrão, o Prophet usa o modelo de crescimento linear para as previsões.
+                    - Seasonality s(t): a série de Fourier é usada para modelar efeitos sazonais ou 
+                    mudanças periódicas (por exemplo: o ciclo semanal, mensal e anual). 
+                    Para aprender e prever tais efeitos, o Prophet depende da série de Fourier para fornecer um modelo flexível.
                     - Feriados e eventos h(t): o Prophet considera o efeito de feriados e permite adicionar os parâmetro
                     supper_window e lower_window, que estendem os efeitos dos feriados em torno de suas datas.
                     - Termo de erro e(t): o termo de erro leva em conta quaisquer mudanças incomuns não acomodadas pelo modelo.
-                    ''', unsafe_allow_html=True)
+                    ''')
         
         # código
         with st.expander('🐍 Exibir código Python'):
@@ -1504,9 +1514,11 @@ elif page == page_2:
             # botão para exibir scores
             if st.button('📊 Exibir Scores'):
                 # dataframe com scores
-                scores_baseline_df = pd.read_parquet(r'data/prophet_baseline_scores.parquet')
-                scores_baseline_df.iloc[:, -3:] = scores_baseline_df.iloc[:, -3:].round(4)
-                st.dataframe(scores_baseline_df)
+                prophet_baseline_dict = {'Horizonte': '3 dias',
+                                        'RMSE': 15.2261,
+                                        'MAE': 8.9039,
+                                        'MAPE': 0.1953}
+                st.write(prophet_baseline_dict)
             
             st.markdown('<br>', unsafe_allow_html=True)
             
@@ -1690,9 +1702,11 @@ elif page == page_2:
             # botão para exibir scores
             if st.button('📊 Exibir Scores'):
                 # dataframe com scores
-                scores_final_df = pd.read_parquet(r'data/prophet_final_scores.parquet')
-                scores_final_df.iloc[:, -3:] = scores_final_df.iloc[:, -3:].round(4)
-                st.dataframe(scores_final_df)
+                prophet_final_dict = {'Horizonte': '3 dias',
+                                      'RMSE': 10.7325,
+                                      'MAE': 6.1403,
+                                      'MAPE': 0.1211}
+                st.write(prophet_final_dict)
 
             st.markdown('<br>', unsafe_allow_html=True)
             
