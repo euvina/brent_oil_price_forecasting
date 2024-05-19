@@ -508,7 +508,7 @@ elif page == page_1:
     
     st.markdown('''
                 <p style="font-size: 18px">
-                    <b><i>Features</i></b> também podem ser extraídas a partir de datas, como:<br><br>
+                    <b><i>Features</i></b> podem ser extraídas a partir de datas, como:<br><br>
                     - mês e dia do mês<br>
                     - ano, trimestre e dia do ano<br>
                     - semana, dia da semana e semana do ano (calendário ISO 8601)
