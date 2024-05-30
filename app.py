@@ -445,7 +445,7 @@ elif page == page_1:
                 <p style="font-size: 18px">
                     <br>
                     O gráfico a seguir mostra a variação do preço do barril de petróleo Brent ao longo do tempo.
-                    Note como as maiores variações correspondem aos meses de Maio, como em 2008, 2009, 2020 e 2022. 
+                    Note que as maiores variações correspondem ao mês de Maio, como nos anos 2008, 2009, 2020 e 2022. 
                     Por sua vez, as 2 maiores baixas do preço correspondem a Outubro/2008, em vista da Grande Recessão, e 
                     Março/2020, início da Pandemia de COVID-19.
                     <br>
