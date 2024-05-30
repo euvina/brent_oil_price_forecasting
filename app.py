@@ -472,8 +472,8 @@ elif page == page_1:
                 <p style="font-size: 18px">
                     A variação diária do petróleo Brent teve evolução constante nos últimos 10 anos dos dados (2014-2024), exceto em 2020.
                     A média de variação entre 2014 e 2019 foi de -0.007%, com desvio padrão de 2.16%. Durante os anos de 2020 e 2021,
-                    a variação média foi de 0.15%, com desvio padrão de 5.05%. Além disso, a máxima variação sobre a mudança no preço
-                    atingida na pandemia foi de 50.98%.<br><br>
+                    a variação média foi de 0.15%, com desvio padrão de 5.05%. Além disso, a variação máxima sobre o preço diário 
+                    durante a pandemia foi de 50.98%.<br><br>
                     A plotagem da variável em 3 dimensões, onde o eixo do gráfico que contém a data é 
                     desmembrado em 2 outros eixos (ano e mês), ajuda a enxergar padrões, 
                     como ciclos de sazonalidade e tendências:
