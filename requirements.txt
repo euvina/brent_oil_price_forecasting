@@ -82,8 +82,8 @@ soupsieve
 stack-data
 stanio
 statsmodels
-streamlit==1.34.0
-streamlit-nightly==1.34.1.dev20240516
+streamlit
+streamlit-nightly
 tenacity
 threadpoolctl
 toml
